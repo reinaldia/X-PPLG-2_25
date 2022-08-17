@@ -286,7 +286,7 @@ li {
 }
 
 .logo--intro {
-    background-image: url(/Media/wallpaperflare.com_wallpaper.jpg);
+    background-image: url(wallpaperflare.com_wallpaper.jpg);
     height: 100%;
     width: auto;
     object-fit: fill;
@@ -418,7 +418,7 @@ li {
 
 .our-lessons {
     background-color: var(--clr-light);
-    background-image: url(../Media/bg-lessons.jpg);
+    background-image: url(bg-lessons.jpg);
     background-size: cover;
     background-blend-mode: soft-light;
     color: var(--clr-dark);
