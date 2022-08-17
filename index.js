@@ -13,10 +13,6 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
     navMenu.classList.remove("active");
 }))
 
-window.onload = function() {
-    document.getElementById("my_audio").play();
-}
-
 $(document).ready(function(){
 
 $("a").on('click', function(event) {
