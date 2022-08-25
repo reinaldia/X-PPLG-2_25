@@ -45,6 +45,7 @@ body::-webkit-scrollbar {
   
   body::-webkit-scrollbar-thumb {
     background-color: transparent;
+    background-color: rgb(50, 50, 50);
     border-radius: 10px;
   }
   
@@ -57,7 +58,7 @@ body::-webkit-scrollbar {
   }
 
 body {
-    background: var(--clr-dark);
+    background: var(--clr-accent);
     color: var(--clr-light);
     margin: 0;
     font-family: var(--ff-primary);
@@ -135,6 +136,7 @@ h3 {
 
 .section__title,
 .section__title--memories {
+    font-weight: var(--fw-bold);
     margin-bottom: .25em;
 }
 
@@ -144,6 +146,7 @@ h3 {
 
 .section__title--about {
     color: var(--clr-dark);
+    font-weight: var(--fw-bold);
 }
 
 .section__title--intro strong {
@@ -164,9 +167,10 @@ h3 {
 }
 
 .section__subtitle--about--class {
-    background: var(--clr-dark);
+    background-image: url(About-Banner.jpg);
+    background-position: 50% 50%;
     padding: .25em 1em;
-    color: var(--clr-light);
+    color: var(--clr-dark); 
     font-family: var(--ff-secondary);
     font-weight: var(--fw-bold);
     margin-bottom: 1em;
@@ -284,6 +288,10 @@ li {
         z-index: 10000;
     }
 
+    .hamburger.active {
+        background-color: var(--clr-dark);
+    }
+
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
@@ -318,6 +326,7 @@ li {
 
     .nav-menu.active {
         left: 0;
+        background-color: var(--clr-dark);
     }
 }
 
@@ -419,9 +428,10 @@ li {
 
 .section__subtitle--about--class {
     display: inline-block;
+    color: var(--clr-light);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 728px) {
     .about-us {
         display: grid;
         grid-template-columns: 1fr 200px;
@@ -430,6 +440,7 @@ li {
             "subtitle img"
             "text img";
         grid-column-gap: 2em;
+        height: 750px;
     }
 
     .section__title--about {
@@ -513,8 +524,12 @@ li {
 /* Our Memories*/
 
 .our-memories {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+    background-color: var(--clr-accent);
+    color: var(--clr-dark);
+    font-weight: var(--fw-bold);
+}
+
+.memories_align {
     text-align: center;
 }
 
@@ -524,7 +539,7 @@ li {
     width: 25%;
     height: 1px;
     margin: 0.5em auto 0.2em;
-    background: var(--clr-light);
+    background: var(--clr-dark);
     opacity: 0.5;
     margin-bottom: .3em;
 }
@@ -535,42 +550,105 @@ li {
     width: 25%;
     height: 1px;
     margin: 0.5em auto 0.2em;
-    background: var(--clr-light);
+    background: var(--clr-dark);
     opacity: 0.5;
 }
 
 .section__subtitle--memories {
-    color: var(--clr-accent);
-    font-weight: var(--fw-bold);
+    color: var(--clr-dark);
 }
 
-.portfolio {
-    display: grid;
-    grid-template-columns: auto, minmax(300px, 1fr);
+.image_carousel {
+    background-color: var(--clr-accent);
 }
 
-
-.portfolio__item {
-    background: var(--clr-accent);
-    overflow: hidden;
-}
-
-.portfolio__img {
-    transition:
-        transform 750ms cubic-bezier(.5, 0, .5, 1),
-        opacity 250ms linear;
-}
-
-.portfolio__img:hover {
-    transform: scale(1.1);
-    opacity: 0.75;
-}
-
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: var(--clr-class);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    text-decoration: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
 /* Footer */
 
 .footer {
-    background: var(--clr-accent);
-    color: var(--clr-dark);
+    background: var(--clr-dark);
+    color: var(--clr-class);
     text-align: center;
     padding: 2.5em 0;
 }

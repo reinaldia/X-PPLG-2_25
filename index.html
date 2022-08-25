@@ -113,33 +113,52 @@
 
 
   <!-- Our Memories -->
-  <section class="our-memories" id="memories">
-    <h2 class="section__title--memories"><i>OUR MEMORIES</i></h2>
-    <p class="section__subtitle--memories"><u>This is our journey</u></p><br>
+  <section class="image_carousel our-memories" id="memories">
+    <h2 class="section__title--memories memories_align"><i>OUR MEMORIES</i></h2>
+    <p class="section__subtitle--memories memories_align">This is our journey</p><br>
 
-    <div class="portfolio">
-      <!-- Portfolio Item 01 -->
-      <a href="" class="portfolio__item">
-        <img src="memories-01.jpeg" alt="" class="portfolio__img">
-      </a>
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+  
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides">
+    <div class="numbertext"></div>
+    <img src="memories-01.jpeg" style="width:100%">
+    <div class="text"></div>
+  </div>
 
-      <!-- Portfolio Item 02 -->
-      <a href="" class="portfolio__item">
-        <img src="memories-02.jpeg" alt="" class="portfolio__img">
-      </a>
+  <div class="mySlides">
+    <div class="numbertext"></div>
+    <img src="memories-02.jpeg" style="width:100%">
+    <div class="text"></div>
+  </div>
 
-      <!-- Portfolio Item 03 -->
-      <a href="" class="portfolio__item">
-        <img src="memories-03.jpeg" alt="" class="portfolio__img">
-      </a>
+  <div class="mySlides">
+    <div class="numbertext"></div>
+    <img src="memories-03.jpeg" style="width:100%">
+    <div class="text"></div>
+  </div>
+  <div class="mySlides">
+    <div class="numbertext"></div>
+    <img src="memories-04.jpeg" style="width:100%">
+    <div class="text"></div>
+  </div>
 
-      <!-- Portfolio Item 04 -->
-      <a href="" class="portfolio__item">
-        <img src="memories-04.jpeg" alt="" class="portfolio__img">
-      </a>
-    </div>
-  </section>
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
 
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+</section>
+  
 
   <!-- Footer -->
   <footer class="footer">
